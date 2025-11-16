@@ -1,45 +1,192 @@
-body {
-  font-family: Arial, sans-serif;
+/* ===== Global Styling ===== */
+* {
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  box-sizing: border-box;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
 }
+
+body {
+  background: linear-gradient(to bottom right, #dfe9ff, #ffffff);
+  color: #222;
+}
+
+/* ===== Container ===== */
 .container {
   width: 80%;
-  margin: 30px auto;
-  background: beige;
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
   padding: 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-left: 6px solid #4a78ff;
 }
+
 h1 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  letter-spacing: 3px;
+  color: #4a78ff;
+  font-weight: 800;
 }
+
+/* ===== Section Style ===== */
 .section {
-  margin-bottom: 40px;
+  margin: 30px 0;
 }
+
 .section-title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
-  border-bottom: 2px solid black;
-  width: fit-content;
-  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 4px solid #4a78ff;
+  margin-bottom: 18px;
+  color: #333;
 }
+
+/* ===== Profile Row ===== */
 .row {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.left, .right {
-  flex: 1;
+
+.left p {
+  margin-bottom: 10px;
+  font-size: 17px;
 }
+
+/* ===== Photo Box ===== */
 .photo-box {
-  width: 200px;
-  height: 220px;
-  border: 2px solid black;
-  background: #ddd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
+  width: 160px;
+  height: 160px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 4px solid #4a78ff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
-ul { margin-top: 5px; }
+
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Lists ===== */
+ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+ul li {
+  background: #e9efff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-left: 5px solid #4a78ff;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+ul li:hover {
+  background: #d7e3ff;
+  transform: translateX(5px);
+}
+
+/* ===== Contact Form ===== */
+#contacts {
+  width: 80%;
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-left: 6px solid #4a78ff;
+}
+
+#contacts h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #4a78ff;
+}
+
+form label {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  background: #f7f7f7;
+  transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #4a78ff;
+  background: white;
+}
+
+form textarea {
+  height: 130px;
+  resize: vertical;
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #4a78ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #2d5fff;
+  transform: scale(1.05);
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  background: #4a78ff;
+  padding: 25px;
+  color: white;
+  font-size: 20px;
+}
+
+footer a {
+  color: yellow;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .photo-box {
+    margin-top: 15px;
+  }
+}
