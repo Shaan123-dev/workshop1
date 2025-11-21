@@ -1,4 +1,3 @@
-/* ===== Global Styling ===== */
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +8,9 @@
 body {
   background: linear-gradient(to bottom right, #dfe9ff, #ffffff);
   color: #222;
+  padding-bottom: 40px;
 }
 
-/* ===== Container ===== */
 .container {
   width: 80%;
   max-width: 900px;
@@ -32,7 +31,6 @@ h1 {
   font-weight: 800;
 }
 
-/* ===== Section Style ===== */
 .section {
   margin: 30px 0;
 }
@@ -46,11 +44,10 @@ h1 {
   color: #333;
 }
 
-/* ===== Profile Row ===== */
 .row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .left p {
@@ -58,7 +55,6 @@ h1 {
   font-size: 17px;
 }
 
-/* ===== Photo Box ===== */
 .photo-box {
   width: 160px;
   height: 160px;
@@ -74,28 +70,69 @@ h1 {
   object-fit: cover;
 }
 
-/* ===== Lists ===== */
-ul {
+/*ul {
   list-style-type: none;
-  padding-left: 10px;
 }
 
 ul li {
   background: #e9efff;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
   border-left: 5px solid #4a78ff;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   transition: 0.2s;
+}
+
+ul li img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 ul li:hover {
   background: #d7e3ff;
   transform: translateX(5px);
+}*/
+
+.section ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-/* ===== Contact Form ===== */
+.section ul li {
+  background: #e9efff;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border-left: 5px solid #4a78ff;
+  border-radius: 8px;
+  font-size: 17px;
+  transition: 0.2s;
+}
+
+.section ul li:hover {
+  background: #d7e3ff;
+  transform: translateX(5px);
+}
+
+.section-title + ul li { /* only project list */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.section-title + ul li img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
 #contacts {
   width: 80%;
   max-width: 900px;
@@ -111,6 +148,10 @@ ul li:hover {
   font-size: 30px;
   margin-bottom: 20px;
   color: #4a78ff;
+}
+
+form {
+  text-align: center;
 }
 
 form label {
@@ -179,14 +220,19 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .row {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
   }
 
   .photo-box {
-    margin-top: 15px;
+    margin-top:15px;
+  }
+
+  .section-title + ul li {
+    flex-direction: column;
+    text-align: center;
   }
 }
