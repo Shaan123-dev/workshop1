@@ -70,35 +70,6 @@ h1 {
   object-fit: cover;
 }
 
-/*ul {
-  list-style-type: none;
-}
-
-ul li {
-  background: #e9efff;
-  padding: 12px 14px;
-  margin-bottom: 12px;
-  border-left: 5px solid #4a78ff;
-  border-radius: 8px;
-  font-size: 17px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  transition: 0.2s;
-}
-
-ul li img {
-  width: 45px;
-  height: 45px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-ul li:hover {
-  background: #d7e3ff;
-  transform: translateX(5px);
-}*/
-
 .section ul {
   list-style: none;
   padding-left: 0;
@@ -119,7 +90,7 @@ ul li:hover {
   transform: translateX(5px);
 }
 
-.section-title + ul li { /* only project list */
+.section-title + ul li {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -200,7 +171,6 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* ===== Footer ===== */
 footer {
   margin-top: 40px;
   text-align: center;
